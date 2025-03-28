@@ -14,7 +14,7 @@ This repository is currently under active development.
 
 ---
 
-## 🚀 How to Run the Tool
+## How to Run the Tool
 
 To run the AquaVitals interface locally, follow these steps:
 
@@ -46,7 +46,7 @@ To run the AquaVitals interface locally, follow these steps:
    live-server
    ```
 
-> 📦 Make sure you have [Node.js](https://nodejs.org/) installed if you want to use the CLI-based live server.
+> Make sure you have [Node.js](https://nodejs.org/) installed if you want to use the CLI-based live server.
 
 ---
 
