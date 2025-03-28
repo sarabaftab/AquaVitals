@@ -6,10 +6,10 @@ body {
   padding: 0;
 }
 
-/* If you want white text overall:
-  body {
-    color: #fff;
-  } */
+/* If you want white text overall:*/
+body {
+  color: #fff;
+}
 
 /* Optional custom styling for the card */
 .card {
