@@ -31,8 +31,7 @@ To run the AquaVitals interface locally, follow these steps:
    cd site
    ```
 
-3. **Option 1: Open `index.html` directly in your browser**  
-   Simply double-click on `index.html` or open it using your preferred browser.
+3. **Option 1: Open `index.html` directly in your browser**
 
 4. **Option 2: Use Live Server (Recommended for smooth local testing)**  
    If you have [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) installed in VS Code:
