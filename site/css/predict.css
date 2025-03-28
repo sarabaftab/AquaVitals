@@ -1,0 +1,18 @@
+/* Gradient background from left (lighter blue) to right (darker blue) */
+body {
+  background: linear-gradient(to right, #99ccff, #3366ff);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* If you want white text overall:
+  body {
+    color: #fff;
+  } */
+
+/* Optional custom styling for the card */
+.card {
+  border-radius: 10px;
+  background-color: #fff; /* Ensure the card is white */
+}

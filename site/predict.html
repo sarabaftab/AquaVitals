@@ -4,25 +4,78 @@
     <meta charset="UTF-8" />
     <title>Predict Weekly Survival Rates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Custom CSS (optional) -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- jQuery UI CSS (for the date picker) -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/predict.css" />
   </head>
-  <body class="bg-light text-dark">
-    <div class="container py-5">
-      <h2>Predict Weekly Survival Rates</h2>
-      <p>
-        This page is intended to allow users to input data and receive
-        predictions for weekly survival rates.
-      </p>
-      <a href="index.html" class="btn btn-primary mt-3">Home</a>
+  <body>
+    <!-- Optional: Back to Home button at the top left -->
+    <div class="container py-4">
+      <a href="index.html" class="btn btn-outline-dark rounded-pill mb-3">
+        &larr; Back to Home
+      </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Top Row: Date + Button (centered) -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-auto d-flex align-items-end">
+          <!-- Label + Date Picker -->
+          <div class="me-3">
+            <label for="datePicker" class="form-label fw-bold">Date</label>
+            <input
+              type="text"
+              id="datePicker"
+              class="form-control"
+              placeholder="MM/DD/YYYY"
+            />
+          </div>
+          <!-- Predict Button -->
+          <div class="mb-1">
+            <button id="predictBtn" class="btn btn-primary">
+              Predict Survival Rate
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centered Result Card (initially hidden) -->
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div
+            class="card p-4 shadow text-center"
+            id="predictionCard"
+            style="display: none"
+          >
+            <!-- Populated by JavaScript -->
+            <div class="row">
+              <!-- Left column: 87% + lot info -->
+              <div class="col-md-6 mb-3 mb-md-0" id="predictionLeft"></div>
+              <!-- Right column: Lorem text -->
+              <div class="col-md-6" id="predictionRight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery and jQuery UI (for the date picker) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Custom JS -->
+    <script src="js/predict.js"></script>
   </body>
 </html>
