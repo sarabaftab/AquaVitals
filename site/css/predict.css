@@ -1,18 +1,49 @@
-/* Gradient background from left (lighter blue) to right (darker blue) */
+/* Global Styles */
 body {
-  background: linear-gradient(to right, #00c6ff, #0072ff) !important;
+  background: linear-gradient(to bottom right, #a2d4f5, #3b82f6);
   min-height: 100vh;
+  font-family: "Helvetica World", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* If you want white text overall:*/
-body {
-  color: #fff;
+/* Predict Card styling */
+.predict-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
 }
 
-/* Optional custom styling for the card */
-.card {
-  border-radius: 10px;
-  background-color: #fff; /* Ensure the card is white */
+/* Date Input styling */
+.predict-input {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Predict Button styling */
+.predict-btn {
+  background-color: #6f42c1;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.predict-btn:hover {
+  background-color: #5a32a3;
+}
+
+.predict-btn svg {
+  width: 1rem;
+  height: 1rem;
 }

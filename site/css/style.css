@@ -1,14 +1,32 @@
-/* Aquatic gradient background */
+/* Blue Green Dark Theme */
+
+/* Global Styles */
 body {
-  background: linear-gradient(to right, #00c6ff, #0072ff) !important;
+  /* Gradient from deep teal (#012E40) to dark blue-green (#0A3D62) */
+  background: linear-gradient(to right, #012e40, #0a3d62) !important;
   color: white;
+  font-family: "Helvetica World", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ensure outline buttons remain transparent on hover */
+/* Override link styles (the About link) */
+.link-light {
+  color: white !important;
+}
+
+/* Outline button styles */
+.btn-outline-light {
+  border-color: white !important;
+  color: white !important;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
 .btn-outline-light:hover,
 .btn-outline-light:focus,
 .btn-outline-light:active {
-  background-color: transparent !important;
-  color: #fff !important;
+  background-color: white !important;
+  color: #012e40 !important; /* Dark blue-green text on white background */
   box-shadow: none !important;
 }
