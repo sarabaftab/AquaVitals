@@ -10,7 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- jQuery UI CSS (for the date picker) -->
+    <!-- jQuery UI CSS (optional, if you want its datepicker) -->
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css"
@@ -21,16 +21,16 @@
   <body>
     <!-- Back to Home Button -->
     <div class="container py-4">
-      <a href="index.html" class="btn btn-outline-light rounded-pill mb-3">
+      <a href="index.html" class="btn btn-outline-dark rounded-pill">
         &larr; Back to Home
       </a>
     </div>
 
     <!-- Main Container -->
     <div class="container">
-      <!-- Predict Card -->
+      <!-- Predict Card: White rounded card for date input and Predict button -->
       <div class="predict-card">
-        <div class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center w-100">
           <label for="predict-date" class="fw-semibold text-dark mb-2">
             Enter Date to Predict Survival Rate
           </label>
@@ -65,8 +65,8 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div
-            class="card p-4 shadow text-center"
             id="predictionCard"
+            class="card p-4 shadow text-center"
             style="display: none"
           >
             <div class="row">
@@ -82,7 +82,7 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery and jQuery UI -->
+    <!-- jQuery and jQuery UI (if needed) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!-- Custom JS -->

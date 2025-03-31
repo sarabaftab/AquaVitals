@@ -1,10 +1,10 @@
-/* Blue Green Dark Theme */
+/* Freshwater Cascade Theme for Home Page */
 
 /* Global Styles */
 body {
-  /* Gradient from deep teal (#012E40) to dark blue-green (#0A3D62) */
-  background: linear-gradient(to right, #012e40, #0a3d62) !important;
-  color: white;
+  /* Gradient from pale blue to soft mint */
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2) !important;
+  color: #333; /* Dark text for clarity */
   font-family: "Helvetica World", sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -13,20 +13,20 @@ body {
 
 /* Override link styles (the About link) */
 .link-light {
-  color: white !important;
+  color: #333 !important;
 }
 
 /* Outline button styles */
 .btn-outline-light {
-  border-color: white !important;
-  color: white !important;
+  border-color: #333 !important;
+  color: #333 !important;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-outline-light:hover,
 .btn-outline-light:focus,
 .btn-outline-light:active {
-  background-color: white !important;
-  color: #012e40 !important; /* Dark blue-green text on white background */
+  background-color: #333 !important;
+  color: #e0f7fa !important;
   box-shadow: none !important;
 }

@@ -1,12 +1,13 @@
 $(document).ready(function () {
-  // (Optional) If you want to use jQuery UI datepicker instead of native input[type="date"]:
+  // (Optional) If you want to use jQuery UI datepicker instead of the native date input,
+  // uncomment the following line:
   // $("#predict-date").datepicker();
 
   $(".predict-btn").on("click", function () {
-    const dateValue = $("#predict-date").val().trim();
-    const predictionCard = $("#predictionCard");
-    const predictionLeft = $("#predictionLeft");
-    const predictionRight = $("#predictionRight");
+    var dateValue = $("#predict-date").val().trim();
+    var predictionCard = $("#predictionCard");
+    var predictionLeft = $("#predictionLeft");
+    var predictionRight = $("#predictionRight");
 
     if (dateValue) {
       // Show the prediction card if a date is selected
@@ -33,7 +34,7 @@ $(document).ready(function () {
           </p>
         `);
     } else {
-      // Hide the prediction card and clear its contents if no date is selected
+      // Hide the prediction card and clear its content if no date is selected
       predictionCard.hide();
       predictionLeft.empty();
       predictionRight.empty();
