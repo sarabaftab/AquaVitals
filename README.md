@@ -11,6 +11,8 @@ Using **machine learning** and **historical data**, this system predicts fish su
 ## Status
 
 This repository is currently under active development and will be launching soon.
+Will be launching final product by the end of this week!
+
 
 ---
 
