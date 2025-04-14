@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Predict Weekly Survival Rates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Litepicker CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}" />
+</head>
+
+<body>
+  <!-- Back to Home Button -->
+  <div class="container py-4">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-dark rounded-pill">
+      &larr; Back to Home
+    </a>
+  </div>
+
+  <!-- Main Section -->
+  <div class="container d-flex flex-column align-items-center">
+    <!-- Prediction Bar -->
+    <div class="predict-bar d-flex justify-content-between align-items-center gap-3 mb-4 flex-wrap">
+      <!-- Date Picker -->
+      <input type="text" id="date-range-picker" class="predict-input flex-grow-1" placeholder="Select date range"
+        readonly />
+
+      <!-- Fish Count -->
+      <input type="number" id="fish-count" class="predict-input flex-grow-1" placeholder="Fish count" min="0" />
+
+
+      <!-- Predict Button -->
+      <button id="predictButton" class="predict-btn flex-grow-1">
+        Predict
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+<!-- Prediction Result Card -->
+<div id="predictionCard" class="predict-result-card p-4 text-center" style="display: none">
+  <div class="row">
+    <div class="col-md-6 mb-3 mb-md-0" id="predictionLeft"></div>
+    <div class="col-md-6" id="predictionRight"></div>
+  </div>
+
+  <!-- Prediction Table -->
+  <div class="table-responsive mt-4">
+    <table id="predictionTable" class="table table-bordered table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>Date</th>
+          <th>AM Transparency</th>
+          <th>PM Transparency</th>
+          <th>Survival Rate (%)</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+  <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+</body>
+
+</html>

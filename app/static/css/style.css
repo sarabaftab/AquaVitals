@@ -1,0 +1,74 @@
+/* Freshwater Cascade Theme with Animated Fishes */
+
+/* Global Styles */
+/* Light Blue-Green Background */
+body {
+    background: linear-gradient(
+      to right,
+      #d0f4f1,
+      #b2ebf2
+    ); /* Light blueish green */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .aquavitals-heading {
+    font-size: 7rem; /* Adjust size here */
+    font-weight: 700; /* Bold */
+    color: #333; /* Dark text */
+    /* margin-bottom: 1rem; */
+  }
+  .aquavitals-subheading {
+    font-size: 2rem; /* Adjust size here */
+    font-weight: 400; /* Bold */
+    color: #333; /* Dark text */
+    margin-bottom: 1rem;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* Override link styles */
+  .link-light {
+    color: #333 !important;
+  }
+  
+  /* Outline button styles */
+  .btn-outline-light {
+    border-color: #333 !important;
+    color: #333 !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-outline-light:hover,
+  .btn-outline-light:focus,
+  .btn-outline-light:active {
+    background-color: #333 !important;
+    color: #e0f7fa !important;
+    box-shadow: none !important;
+  }
+  
+  /* Glass effect for buttons */
+  .glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Vertical Divider Line */
+  .vr {
+    border-left: 2px solid #333;
+    height: 60%;
+  }
+  

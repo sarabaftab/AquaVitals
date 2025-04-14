@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AquaVitals - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <!-- DotLottie Player Script -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <style></style>
+</head>
+
+<body>
+  <!-- Fullscreen Animated Background -->
+  <dotlottie-player src="https://lottie.host/0a4f01b2-8a42-4330-9a56-60d17bfb5c30/sFnGpE9z3f.lottie"
+    background="transparent" speed="1" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 0;
+        pointer-events: none;
+      " loop autoplay></dotlottie-player>
+
+  <!-- Main Content -->
+  <div
+    class="container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center text-center position-relative"
+    style="z-index: 1">
+    <!-- Centered AquaVitals Logo -->
+    <h1 class="aquavitals-heading">AquaVitals</h1>
+    <h2 class="aquavitals-subheading">Stay Informed. Stay AquaSmart.</h2>
+
+    <!-- Predict Button -->
+    <a href="{{ url_for('predict') }}" class="btn btn-outline-light rounded-pill btn-lg glass px-5">
+      Predict Weekly Survival Rates
+    </a>
+
+    <!-- About Link -->
+    <div class="mt-4">
+      <a href="{{ url_for('about') }}" class="text-decoration-none fs-5 link-light">About</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

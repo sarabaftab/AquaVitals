@@ -1,0 +1,86 @@
+/* 🌊 Freshwater Cascade Updated Theme */
+
+/* Global Background */
+body {
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2) !important;
+    color: #333;
+    font-family: "Helvetica World", sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Back to Home Button */
+  .link-light {
+    color: #333 !important;
+  }
+  
+  /* Prediction Bar */
+  .predict-bar {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  /* Inputs Styling */
+  .predict-input {
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #f9f9f9;
+    height: 52px;
+    padding: 0 20px;
+    min-width: 160px;
+    flex: 1 1 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .predict-input:hover,
+  .predict-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.1);
+    outline: none;
+  }
+  
+  /* Predict Button (Outline Style) */
+  .predict-btn {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 52px;
+    flex: 1 1 0;
+    min-width: 160px;
+  }
+  
+  .predict-btn:hover {
+    background-color: #333;
+    color: #e0f7fa;
+  }
+  
+  .predict-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  /* Prediction Result Card */
+  .predict-result-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    max-width: 900px;
+    width: 100%;
+  }
+  
