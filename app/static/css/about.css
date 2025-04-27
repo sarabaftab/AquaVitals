@@ -1,0 +1,106 @@
+/* 🌊 AquaVitals About Page - Freshwater Cascade Glass Theme */
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  color: #1e3d59;
+  font-family: "Helvetica World", sans-serif;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #1e3d59;
+}
+
+.btn-outline-dark {
+  border-color: #1e3d59 !important;
+  color: #1e3d59 !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-dark:hover {
+  background-color: #1e3d59 !important;
+  color: #e0f7fa !important;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #031749;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #031749;
+}
+
+.section-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #031749;
+}
+
+.section-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #031749;
+}
+
+.section-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.team-heading {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #031749;
+}
+
+.team-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #031749;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  background-color: #031749;
+  color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+.team-card h5 {
+  font-size: 1.4rem;
+  margin: 0;
+  transition: font-size 0.3s;
+}
+
+.team-card:hover h5 {
+  font-size: 1.6rem;
+}

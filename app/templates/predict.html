@@ -34,7 +34,7 @@
 
       <!-- Fish Count -->
       <input type="number" id="fish-count" class="predict-input flex-grow-1" placeholder="Fish count" min="0" />
-
+     
 
       <!-- Predict Button -->
       <button id="predictButton" class="predict-btn flex-grow-1">
@@ -70,12 +70,44 @@
       </tbody>
     </table>
   </div>
+
+      <!-- Add this inside the predictionCard div, after the table -->
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="chart-container" style="position: relative; height:300px;">
+            <canvas id="transparencyLineChart"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="chart-container" style="position: relative; height:300px;">
+            <canvas id="transparencyBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+  <!-- Report Download Section -->
+<div class="mt-4 text-center">
+  <label for="report-date" class="form-label">Download Report for Date:</label>
+  <select id="report-date" class="form-select d-inline-block w-auto mx-2"></select>
+  <button class="btn btn-outline-dark" onclick="downloadReport()">Download PDF</button>
+  <button class="btn btn-outline-dark ms-2" onclick="downloadAllReports()">Download All Reports (ZIP)</button>
+
+</div>
+
+
 </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  const { jsPDF } = window.jspdf;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
 </body>
 
 </html>

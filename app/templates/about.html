@@ -1,99 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About AquaVitals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>About AquaVitals</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap CSS -->
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <style>
-      body {
-        background-color: #e6f2ff; /* light blue */
-        color: #000;
-      }
-
-      .team-card {
-        background-color: #e6f2ff;
-        color: #000;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        border: 1px solid #ccc;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      .team-card:hover {
-        background-color: #1e3d59;
-        color: #fff;
-        transform: scale(1.02);
-      }
-
-      .team-card h5 {
-        margin: 0;
-        transition: font-size 0.3s ease;
-        font-size: 1.5rem;
-      }
-
-      .team-card:hover h5 {
-        font-size: 1.75rem;
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}"
+    />
   </head>
+
   <body>
-    <div class="container py-5">
-      <!-- Back to Home button -->
-      <div class="container py-4">
-        <a href="{{ url_for('index') }}" class="btn btn-outline-dark rounded-pill">
+    <!-- <div class="container"> -->
+      <!-- Back to Home -->
+      <div class="mb-4 text-start">
+        <a
+          href="{{ url_for('index') }}"
+          class="btn btn-outline-dark rounded-pill"
+        >
           &larr; Back to Home
         </a>
       </div>
 
-      <!-- About AquaVitals Heading -->
-      <h2 class="mb-3">About AquaVitals</h2>
+      <!-- Hero Section -->
+      <div class="hero-heading">Welcome to AquaVitals</div>
+      <div class="hero-subheading">
+        Empowering hatcheries with AI-driven fish survival predictions
+      </div>
 
-      <!-- About Content -->
-      <p>
-        <strong>AquaVitals</strong> is an AI-powered tool designed to help fish hatcheries in Iowa optimize fish survival through predictive modeling. Using real environmental data — including temperature, rainfall, and water clarity — our system forecasts fish health outcomes to support smarter, data-driven decisions.
-      </p>
+      <!-- About Section -->
+      <div class="section-card">
+        <h3>About AquaVitals</h3>
+        <p>
+          AquaVitals is an AI-powered tool built to help fish hatcheries in Iowa
+          predict fish survival outcomes using environmental data. By analyzing
+          temperature, rainfall, and water clarity, we provide accurate,
+          actionable insights to support decision-making at every stage of fish
+          care.
+        </p>
+        <p>
+          The platform is based on a multi-stage regression pipeline and trained
+          on real-world data from the Decorah Fish Hatchery. It’s designed to be
+          modular, scalable, and easy for both scientists and hatchery managers
+          to use.
+        </p>
+      </div>
 
-      <p>
-        Built on a multi-stage regression pipeline, AquaVitals models how environmental stressors affect fish over time. It is modular, scalable, and grounded in real-world data from the Decorah Fish Hatchery, making it practical for hatchery managers and researchers alike.
-      </p>
+      <!-- Mission Section -->
+      <div class="section-card">
+        <h3>Our Mission</h3>
+        <p>
+          Our mission is to promote sustainable aquaculture by equipping
+          hatchery teams with tools that improve survival rates and reduce
+          operational uncertainty. We believe data should drive decisions — and
+          our goal is to make predictive intelligence accessible and practical
+          for every hatchery.
+        </p>
+        <p>
+          AquaVitals was developed as part of the Pi515 AI Challenge by a team
+          of student innovators passionate about agriculture, sustainability,
+          and environmental technology.
+        </p>
+      </div>
 
-      <p>
-        This project was created as part of the Pi515 AI Challenge by a passionate group of student innovators focused on sustainable agriculture and environmental technology.
-      </p>
-
-      <!-- Team Member Cards -->
-      <h4 class="mt-5 mb-3">Meet the Team</h4>
+      <!-- Team Section -->
+      <h4 class="team-heading">Meet the Team</h4>
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- Member Cards with LinkedIn -->
         <div class="col">
-          <a href="https://www.linkedin.com/in/mughees-warraich/" target="_blank" class="team-card shadow-sm">
-            <h5 class="card-title">Mughees</h5>
+          <a
+            href="https://www.linkedin.com/in/mughees-warraich/"
+            target="_blank"
+            class="team-card"
+          >
+            <h5>Mughees</h5>
           </a>
         </div>
         <div class="col">
-          <a href="https://www.linkedin.com/in/sarabaftab/" target="_blank" class="team-card shadow-sm">
-            <h5 class="card-title">Sarab</h5>
+          <a
+            href="https://www.linkedin.com/in/sarabaftab/"
+            target="_blank"
+            class="team-card"
+          >
+            <h5>Sarab</h5>
           </a>
         </div>
         <div class="col">
-          <a href="https://www.linkedin.com/in/abd785" target="_blank" class="team-card shadow-sm">
-            <h5 class="card-title">Abdullah</h5>
+          <a
+            href="https://www.linkedin.com/in/abd785"
+            target="_blank"
+            class="team-card"
+          >
+            <h5>Abdullah</h5>
           </a>
         </div>
         <div class="col">
-          <a href="https://www.linkedin.com/in/nipun-yonjan-605573292/" target="_blank" class="team-card shadow-sm">
-            <h5 class="card-title">Nipun</h5>
+          <a
+            href="https://www.linkedin.com/in/nipun-yonjan-605573292/"
+            target="_blank"
+            class="team-card"
+          >
+            <h5>Nipun</h5>
           </a>
         </div>
       </div>

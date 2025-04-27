@@ -7,6 +7,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.impute import KNNImputer
 from timeseries_utils import generate_time_series_features
+from sentence_transformers import SentenceTransformer
+
 
 
 def load_fish_data():
@@ -56,6 +58,34 @@ def load_fish_data():
 
     ts_columns = ["Spring Temp (F)", "AM Transparency", "PM Transparency", "Dec Rain", "Calmar Rain"]
     df = generate_time_series_features(df, cols=ts_columns, lags=[3,2,1], rolling_windows=[7])
+
+     # ✅ Simulate caretaker comment
+    def generate_comment(row):
+        comments = []
+        if row["AM Transparency"] < 80:
+            comments.append("Water looked slightly murky today.")
+        else:
+            comments.append("Water appeared clear and calm.")
+        if row["Spring Temp (F)"] < 50:
+            comments.append("Tank felt colder than usual.")
+        elif row["Spring Temp (F)"] > 60:
+            comments.append("Tank felt warmer than usual.")
+        if row["Total Rain"] > 0.4:
+            comments.append("Rain might have affected clarity.")
+        return " ".join(comments)
+
+    df["Caretaker_Comment"] = df.apply(generate_comment, axis=1)
+
+    # ✅ NLP Embedding for text comments
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    df["comment_embedding"] = df["Caretaker_Comment"].apply(lambda x: model.encode(str(x)))
+    
+    # Split the embedding into multiple columns
+    embedding_df = pd.DataFrame(df["comment_embedding"].tolist(), index=df.index)
+    embedding_df.columns = [f"text_emb_{i}" for i in range(embedding_df.shape[1])]
+    
+    # Add embeddings to main dataframe
+    df = pd.concat([df.drop(columns=["comment_embedding"]), embedding_df], axis=1)
 
     return df
 
