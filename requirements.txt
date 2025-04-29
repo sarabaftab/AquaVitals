@@ -152,6 +152,7 @@ pythonds3==3.1.0
 pyttsx3==2.98
 pytz==2020.1
 requests==2.32.3
+sentence-transformers==2.2.2
 scikit-learn==1.6.1
 six==1.16.0
 soundfile==0.13.1
