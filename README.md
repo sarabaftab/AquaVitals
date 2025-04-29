@@ -4,13 +4,14 @@
 
 ### 🔍 Overview
 
-**AquaVitals** is a full-stack AI-powered tool that predicts weekly fish survival rates using environmental features such as rainfall, temperature, and water transparency. Built using a Flask backend and a lightweight HTML/JS frontend, it delivers real-time predictions through a user-friendly interface. The backend integrates weather APIs and XGBoost regression models for spring temperature, transparency, and survival.
+**AquaVitals** is a full-stack AI-powered tool that predicts weekly fish survival rates using environmental features such as rainfall, temperature, and water transparency. Built using a Flask backend and a lightweight HTML/JS frontend, it delivers real-time predictions through a user-friendly interface. The backend integrates weather APIs and XGBoost regression models for spring temperature, transparency, and survival. Will be deployed very soon!
 
 ---
 
 ### 🏗️ System Architecture
 
 - **Frontend**
+
   - Built with HTML, CSS, and JavaScript
   - Uses Litepicker for intuitive date range selection
   - Collects user input (date range, fish count)
@@ -28,7 +29,6 @@
 ---
 
 ## 📁 Project Structure.
-
 
 ```
 PI515-AI/
@@ -59,7 +59,7 @@ PI515-AI/
 │   ├── about.html
 │   ├── index.html
 │   └── predict.html
-│ 
+│
 ├── src/
 │   ├── __pycache__/
 │   │
@@ -99,34 +99,34 @@ PI515-AI/
 The system follows a sequential prediction flow:
 
 1. **Input Features**
-   - Max/Min Air Temperature  
-   - Dec/Calmar Rain  
-   - Season, Day of Year  
+
+   - Max/Min Air Temperature
+   - Dec/Calmar Rain
+   - Season, Day of Year
    - Time Series Features (Lag, Rolling Avg)  
-   ↓
+     ↓
 
 2. **Model 1: Predict Spring Temp (F)**
+
    - Uses input features to predict water temperature  
-   ↓
+     ↓
 
 3. **Model 2: Predict Transparency (AM/PM)**
+
    - Uses input features + predicted Spring Temp (F)  
-   ↓
+     ↓
 
 4. **Model 3: Predict Fish Survival Rate**
-   - Uses input features + predicted Spring Temp + predicted Transparency  
+   - Uses input features + predicted Spring Temp + predicted Transparency
 
 ---
-
 
 ## 📌 Why Focus on RMSE and MAPE?
 
 In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (Mean Absolute Percentage Error)** rather than R² for the following reasons:
 
 - **Narrow Target Range**: The target variable — fish survival rate — lies in a very tight range (~99.2–100). This means that even small prediction errors can lead to very low or even negative R² values, making it a misleading metric in this context.
-  
 - **RMSE** gives a good indication of the absolute prediction error magnitude in the same units as the target variable.
-  
 - **MAPE** provides a scale-independent metric that shows how close predictions are in percentage terms — ideal for understanding model performance when values are close together.
 
 > ✅ A low RMSE and MAPE indicate that the predictions are accurate and consistent, even when R² may not reflect this due to the lack of target variance.
@@ -136,6 +136,7 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 ## 📊 Model Performance Summary
 
 ### 🌤️ Spring Temp (F) Prediction Model (XGBoost)
+
 - **Best Parameters**: `learning_rate=0.1`, `max_depth=4`, `n_estimators=1000`, `subsample=0.8`
 - **Train Set**:
   - RMSE: **0.2974**
@@ -153,6 +154,7 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 ---
 
 ### 🌫️ AM Transparency Prediction Model (XGBoost)
+
 - **Best Parameters**: `learning_rate=0.1`, `max_depth=4`, `n_estimators=1000`, `subsample=0.8`
 - **Train Set**:
   - RMSE: **2.0794**
@@ -170,6 +172,7 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 ---
 
 ### 🌫️ PM Transparency Prediction Model (XGBoost)
+
 - **Best Parameters**: `learning_rate=0.1`, `max_depth=4`, `n_estimators=1000`, `subsample=1.0`
 - **Train Set**:
   - RMSE: **1.6149**
@@ -187,6 +190,7 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 ---
 
 ### 🐟 Fish Survival Rate Prediction Model (XGBoost)
+
 - **Best Parameters**: `learning_rate=0.1`, `max_depth=2`, `n_estimators=1000`, `subsample=1.0`
 - **Train Set**:
   - RMSE: **0.2166**
@@ -203,35 +207,39 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 
 ---
 
-
 # ⚙️ How to Run Locally
 
 1. Clone the repository
+
    ```bash
    git clone [https://github.com/yourusername/aquavitals.git]
    cd aquavitals
    ```
 
 2. Create and activate a virtual environment
-   
+
    **macOS/Linux:**
+
    ```bash
    python -m venv .venv
    source .venv/bin/activate
    ```
-   
+
    **Windows:**
+
    ```bash
    python -m venv .venv
    .venv\Scripts\activate
    ```
 
 3. Install dependencies
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Run the Flask app
+
    ```bash
    python app.py
    ```
@@ -245,4 +253,3 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 ✅ **Note:** Ensure all .joblib model files are present in the src/models/ directory before running the app.
 
 ---
-
