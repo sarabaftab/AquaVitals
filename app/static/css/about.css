@@ -6,6 +6,7 @@ body {
   font-family: "Helvetica World", sans-serif;
   min-height: 100vh;
   text-align: center;
+  padding: 2rem 7rem;
 }
 
 .container {
