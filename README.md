@@ -229,7 +229,7 @@ In our evaluation, we emphasize **RMSE (Root Mean Squared Error)** and **MAPE (M
 1. Clone the repository
 
    ```bash
-   git clone [https://github.com/yourusername/aquavitals.git]
+   git clone https://github.com/sarabaftab/AquaVitals.git
    cd aquavitals
    ```
 
