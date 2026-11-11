@@ -3,8 +3,19 @@
 ## Documentation
 
 ### 🔍 Overview
+What if we could predict how well fish would survive, before environmental conditions put them at risk?
 
-**AquaVitals** is a full-stack AI-powered tool that predicts weekly fish survival rates using environmental features such as rainfall, temperature, and water transparency. Built using a Flask backend and a lightweight HTML/JS frontend, it delivers real-time predictions through a user-friendly interface. The backend integrates weather APIs and XGBoost regression models for spring temperature, transparency, and survival. Will be deployed very soon!
+That's the idea behind **AquaVitals**.
+
+Built to tackle a real-world challenge at the **Decorah Fish Hatchery, operated by the Iowa Department of Natural Resources (DNR)**, AquaVitals uses AI to help make fish survival more predictable.
+
+Using real historical data, it looks at factors like rainfall, water temperature, and water clarity to predict weekly fish survival rates. Behind the scenes, machine learning models process this information, while a simple web interface makes the results easy to understand.
+
+Built with **Python, Flask, and XGBoost**, AquaVitals turns years of environmental data into insights that could help hatcheries make better decisions.
+
+The project was developed for the **Pi515 AI Challenge, where it won first place**.
+
+**The goal is simple: use AI to understand what affects fish survival, so hatcheries can make better decisions before problems arise.**
 
 ---
 
